@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Twitch Hover Preview",
+    "version": "0.2.0", 
+    "description": "Previews Twitch streams in their thumbnail on hover.",
+    "permissions": [
+      
+    ],
+    "host_permissions": [
+      "https://*.twitch.tv/*"
+      
+    ],
+  
+    
+    "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    
+  
+    "content_scripts": [
+      {
+        "matches": ["https://*.twitch.tv/*"],
+        "exclude_matches": ["https://player.twitch.tv/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+      
+    ],
+  
+    "action": {
+     
+      "default_title": "Twitch Hover Preview",
+      "default_icon": {
+        "16": "icon16.png",
+        "32": "icon32.png" 
+        
+      }
+    }
+  }
